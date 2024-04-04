@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;baimoi.claasss.java&apos; to &apos;sinhvien.java&apos;&#x0D;&#x0A;- Original project: &apos;baimoi&apos;&#x0D;&#x0A;- Original element: &apos;baimoi.claasss.java&apos;&#x0D;&#x0A;- Renamed element: &apos;baimoi.sinhvien.java&apos;" description="Rename compilation unit &apos;claasss.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;baimoi{claasss.java" name="sinhvien.java" references="false" stamp="1657981678961" version="1.0"/>
+</session>

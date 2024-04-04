@@ -1,0 +1,44 @@
+package xml;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.lang.model.element.Element;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+
+public class manageProduct {
+
+	private static String filename = "src//qlsp//Products.xml";
+	private DocumentBuilderFactory factory;
+	private DocumentBuilder builder;
+	private Document document;
+	public manageProduct() {
+		try {
+			factory = DocumentBuilderFactory.newInstance();
+			builder = factory.newDocumentBuilder();
+			document = builder.parse(filename);
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<Product> getAllProducts(){
+		ArrayList<Product> list = new ArrayList<Product>();
+		
+		Element root = document.getDocumentElement();
+		NodeList pList = root.getEnclosingElement("product");
+		
+	}
+}

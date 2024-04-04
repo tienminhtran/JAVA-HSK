@@ -1,0 +1,37 @@
+package view;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class text_Flowlayout extends JFrame{
+
+	public text_Flowlayout() 
+	{
+		this.setTitle("Vidu");
+		this.setSize(600,400);
+		// can giua cua so chuong trinh
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		//set layout
+//		FlowLayout flo= new FlowLayout();
+//		FlowLayout flo1= new FlowLayout(FlowLayout.CENTER,50,50);
+////		this.setLayout(flo);
+//		this.setLayout(flo1);
+//		JButton button_1 = new JButton("1");
+//		JButton button_2 = new JButton("2");
+//		JButton button_3 = new JButton("3");
+//		this.add(button_1);
+//		this.add(button_2);
+//		this.add(button_3);
+		
+	}
+	public static void main(String[] args) {
+		new text_Flowlayout();
+		
+	}
+}

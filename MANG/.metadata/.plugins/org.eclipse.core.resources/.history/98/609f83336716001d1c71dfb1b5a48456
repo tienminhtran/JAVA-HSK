@@ -1,0 +1,21 @@
+
+public class VD {
+	public static void main(String[] args) {
+		String s1 = "titv.vn";
+		String s2 = "TITV.VN";
+		String s3 = "titv.vn";
+		//------------------equals so sanh do dai phân biệt hoa thg
+		System.out.println("equals: "+s1.equals(s3));
+		System.out.println("equals: "+s1.equals(s2));
+		//-------------------equalsIgnoreCase: so sanh do dai không phân biệt hoa thg
+		System.out.println("equalsIgnoreCase(: "+s1.equalsIgnoreCase(s3));
+		System.out.println("equalsIgnoreCase(: "+s1.equalsIgnoreCase((s2));
+		//-------------------compareTo: so sanh > < =
+		String sv1 = "Nguyễn Văn A";
+		String sv2 = "Nguyễn Văn B";
+		String sv3 = "Nguyễn Văn";
+		System.out.println("SV1 compareTo  SV2"+sv1.compareTo(sv3));
+		System.out.println("SV1 compareTo  SV2"+sv1.compareTo(sv2));
+	}
+}
+ 

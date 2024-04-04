@@ -1,0 +1,41 @@
+package view;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import model.count;
+
+public class countview extends JFrame{
+	private count countmodel;
+	private JButton jbutton_up;
+	private JButton jbutton_down;
+	private JLabel jlabel_value;
+	public countview() {
+		this.countmodel= new count();
+		this.init();
+		this.setVisible(true);
+	}
+	public void init() 
+	{
+		this.setTitle("counter");
+		this.setSize(300,300);
+		this.setLocationRelativeTo(null);	
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
+		jbutton_up = new JButton("UP");
+		jbutton_down= new JButton("DOWN");
+		jlabel_value= new JLabel(this.countmodel.getValue()+"");
+		
+		JPanel jpanel = new JPanel();
+		jpanel.setLayout(new BorderLayout());
+		jpanel.add(jbutton_down, BorderLayout.WEST);
+		jpanel.add(jlabel_value,BorderLayout.CENTER);
+		jpanel.add(jbutton_up,BorderLayout.EAST);
+		this.setLayout(new BorderLayout());
+		this.add(jpanel);
+		
+	}
+}

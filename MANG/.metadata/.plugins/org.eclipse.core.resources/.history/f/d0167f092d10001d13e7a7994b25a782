@@ -1,0 +1,17 @@
+package view;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import model.count;
+
+public class countview extends JFrame{
+	private count countmodel;
+	private JButton jbutton_up;
+	private JButton jbutton_down;
+	private JLabel 	jlaber_value;
+	public countview() {
+		
+	}
+}

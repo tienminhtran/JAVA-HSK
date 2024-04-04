@@ -1,0 +1,13 @@
+package test;
+
+import model.count;
+
+public class test {
+	public static void main(String[] args) {
+		count ct= new count();
+		ct.increment();
+		ct.increment();
+		ct.increment();
+		System.out.println(ct.getValue());
+	}
+}

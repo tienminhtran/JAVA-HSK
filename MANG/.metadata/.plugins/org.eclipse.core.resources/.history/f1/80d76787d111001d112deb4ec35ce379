@@ -1,0 +1,33 @@
+package model;
+
+import java.awt.Color;
+
+public class Mycolomodel {
+  private Color fbreground;// mau chu
+  private Color background;// nen
+  private boolean opaque;// duong vien
+public Mycolomodel() {
+	this.fbreground = Color.BLACK;
+	this.background = Color.WHITE;
+	this.opaque = opaque;	
+}
+public Color getFbreground() {
+	return fbreground;
+}
+public void setFbreground(Color fbreground) {
+	this.fbreground = fbreground;
+}
+public Color getBackground() {
+	return background;
+}
+public void setBackground(Color background) {
+	this.background = background;
+}
+public boolean isOpaque() {
+	return opaque;
+}
+public void setOpaque(boolean opaque) {
+	this.opaque = opaque;
+}
+   
+}

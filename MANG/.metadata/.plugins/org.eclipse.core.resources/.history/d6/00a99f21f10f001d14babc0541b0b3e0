@@ -1,0 +1,26 @@
+package view;
+
+import javax.swing.JFrame;
+
+public class text_Flowlayout extends JFrame
+{
+	public text_Flowlayout() 
+	{
+		this.setTitle("Test_Flowlayout");
+		this.setSize(600,400);
+		// can giua cua so chuong trinh
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
+	
+	
+	
+	}
+	
+	public static void main(String[] args) {
+		new text_Flowlayout();
+	}
+	
+	
+}

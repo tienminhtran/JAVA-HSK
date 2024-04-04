@@ -1,0 +1,11 @@
+
+public class VD {
+	public static void main(String[] args) {
+		String s1 = "titv.vn";
+		String s2 = "TITV.VN";
+		String s3 = "titv.vn";
+		System.out.println("euqals"+s1.equals(s3));
+		System.out.println("euqals"+s1.equals(s2));
+
+	}
+}

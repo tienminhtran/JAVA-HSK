@@ -1,0 +1,49 @@
+package view;
+
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Text_gridlayout extends JFrame
+{
+	public Text_gridlayout() 
+	{
+		this.setTitle("Test_Gridlayout");
+		this.setSize(600,400);
+		// can giua cua so chuong trinh
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		// set layout
+		//tao layout
+		GridLayout gridlayout= new GridLayout();
+		GridLayout gridlayout_1= new GridLayout(4,4);
+		GridLayout girdlayout_2= new GridLayout(4,4,25,25);
+
+		
+		// cach hien thi
+		this.setLayout(gridlayout);
+		
+		//Tao ra button
+		JButton jbutton_1 = new JButton("1");
+		JButton jbutton_2 = new JButton("2");
+		JButton jbutton_3 = new JButton("3");
+		
+		//add thanh phan vao
+		this.add(jbutton_1);
+		this.add(jbutton_2);
+		this.add(jbutton_3);
+
+	
+	
+	}
+	
+	public static void main(String[] args) {
+		new text_Flowlayout();
+	}
+	
+	
+}

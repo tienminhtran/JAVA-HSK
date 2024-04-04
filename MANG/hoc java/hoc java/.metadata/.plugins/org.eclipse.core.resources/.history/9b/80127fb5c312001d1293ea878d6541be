@@ -1,0 +1,62 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import model.minicalculatormodel;
+
+public class Minicalculatorview extends JFrame {
+	private minicalculatormodel minicalculatormodel;
+	public Minicalculatorview() {
+		this.minicalculatormodel= new minicalculatormodel();
+		this.init();
+	}
+	public void init() 
+	{
+		this.setTitle("Mini Calculator");
+		this.setSize(300,300);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Font font = new Font("Aria", Font.BOLD,20);
+		JLabel jlabel_firstvalue= new JLabel("1st value");
+		jlabel_firstvalue.setFont(font);
+		JLabel jlabel_secondvalue= new JLabel("2st value");
+		jlabel_secondvalue.setFont(font);
+		JLabel jlabel_answer = new JLabel("Answer");
+		jlabel_answer.setFont(font);
+		
+		// nhap du lieu
+		JTextField jtextfield_firstvalue= new JTextField(20);
+		jtextfield_firstvalue.setFont(font);
+		JTextField jtextfield_secondvalue= new JTextField(20);
+		jtextfield_secondvalue.setFont(font);
+		JTextField jtextfield_answer = new JTextField(20);
+		jtextfield_answer.setFont(font);
+		
+		JPanel jpanelIO= new JPanel();
+		jpanelIO.setLayout(new GridLayout(3,2,10,50));
+		jpanelIO.add(jlabel_firstvalue);
+		jpanelIO.add(jtextfield_firstvalue);
+		jpanelIO.add(jlabel_secondvalue);
+		jpanelIO.add(jtextfield_secondvalue);
+		jpanelIO.add(jlabel_answer);
+		jpanelIO.add(jtextfield_answer);
+		
+		this.setLayout(new BorderLayout());
+		this.add(jpanelIO,BorderLayout.CENTER);
+		
+		
+		
+		
+		this.setVisible(true);
+	}
+	
+}

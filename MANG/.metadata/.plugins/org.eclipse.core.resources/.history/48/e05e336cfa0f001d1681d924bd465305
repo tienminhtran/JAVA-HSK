@@ -1,0 +1,17 @@
+package View;
+
+import javax.swing.JFrame;
+
+public class MyCalculate extends JFrame{
+	public MyCalculate() {
+		this.setTitle("My Calculator");
+		this.setSize(400,600);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);;
+		
+	}
+	public static void main(String[] args) {
+		new MyCalculate();
+	}
+}

@@ -1,0 +1,7 @@
+package view;
+
+public class buttonview extends JFrame{
+	public buttonview() {
+		private          
+	}
+}

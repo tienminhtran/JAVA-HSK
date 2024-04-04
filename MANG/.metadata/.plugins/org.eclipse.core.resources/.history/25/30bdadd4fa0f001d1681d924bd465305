@@ -1,0 +1,60 @@
+package View;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+public class MyCalculate extends JFrame{
+	public MyCalculate() {
+		this.setTitle("My Calculator");
+		this.setSize(400,600);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);;
+		
+		//Noi nhap du lieu vao
+		JTextField jtextfield = new JTextField();
+		JButton jbutton_0 = new JButton("0");
+		JButton jbutton_1 = new JButton("1");
+		JButton jbutton_2 = new JButton("2");
+		JButton jbutton_3 = new JButton("3");
+		JButton jbutton_4 = new JButton("4");
+		JButton jbutton_5 = new JButton("5");
+		JButton jbutton_6 = new JButton("6");
+		JButton jbutton_7 = new JButton("7");
+		JButton jbutton_8 = new JButton("8");
+		JButton jbutton_9 = new JButton("9");
+		JButton jbutton_cong = new JButton("+");
+		JButton jbutton_tru = new JButton("-");
+		JButton jbutton_nhan = new JButton("*");
+		JButton jbutton_chia = new JButton("/");
+		JButton jbutton_bang = new JButton("=");
+		
+		// kieu layout
+		this.setLayout(new FlowLayout());
+		
+		// them thanh phan vao
+		this.add(jbutton_0);
+		this.add(jbutton_1);
+		this.add(jbutton_2);
+		this.add(jbutton_3);
+		this.add(jbutton_4);
+		this.add(jbutton_5);
+		this.add(jbutton_6);
+		this.add(jbutton_7);
+		this.add(jbutton_8);
+		this.add(jbutton_9);
+		this.add(jbutton_cong);
+		this.add(jbutton_tru);
+		this.add(jbutton_nhan);
+		this.add(jbutton_chia);
+		this.add(jbutton_bang);
+		
+	
+	}
+	public static void main(String[] args) {
+		new MyCalculate();
+	}
+}

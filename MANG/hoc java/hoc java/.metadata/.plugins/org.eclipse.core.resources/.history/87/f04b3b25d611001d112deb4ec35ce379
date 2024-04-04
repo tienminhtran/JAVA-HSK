@@ -1,0 +1,98 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import controller.mycolorlistener;
+import model.Mycolomodel;
+
+public class Mycolorview extends JFrame {
+	private Mycolomodel mycolomodel;
+	private JLabel jlabel;
+	public Mycolorview() {
+		this.mycolomodel= new Mycolomodel();
+		this.init();
+	}
+	public void init() 
+	{
+		this.setTitle("My Color");
+		this.setSize(800,600);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Font font1= new Font("Aria", Font.BOLD, 20);
+		Font font2= new Font("Aria", Font.BOLD, 100);
+		Font font = new Font("Aria", Font.BOLD, 15);
+		jlabel = new JLabel("Hello Word");
+		jlabel.setFont(font2);
+		JPanel jpanel = new JPanel();
+		jpanel.setLayout(new GridLayout(2,3,5,5));
+		mycolorlistener ml= new mycolorlistener(this);
+		
+		
+		JButton jbutton_text_red = new JButton("Red Text");
+		jbutton_text_red.setFont(font1);
+		jbutton_text_red.setForeground(Color.RED);
+		jbutton_text_red.addActionListener(ml);
+//		jbutton_text_red.setOpaque(true);
+		//Them vien
+		
+		JButton jbutton_text_yello = new JButton("Yello Text");
+		jbutton_text_yello.setFont(font1);
+		jbutton_text_yello.setForeground(Color.YELLOW);
+//		jbutton_text_yello.setOpaque(true);
+		jbutton_text_yello.addActionListener(ml);
+		
+		JButton jbutton_text_green = new JButton("Green Text");
+		jbutton_text_green.setFont(font1);
+		jbutton_text_green.setForeground(Color.GREEN);
+//		jbutton_text_green.setOpaque(true);
+		jbutton_text_green.addActionListener(ml);
+		
+		JButton jbutton_background_red = new JButton("Red Background");
+		jbutton_background_red.setFont(font);
+		jbutton_background_red.setBackground(Color.RED);
+		jbutton_background_red.setOpaque(true);
+		jbutton_background_red.addActionListener(ml);
+		
+		JButton jbutton_background_yello = new JButton("Yello Background");
+		jbutton_background_yello.setFont(font);
+		jbutton_background_yello.setBackground(Color.YELLOW);
+		jbutton_background_yello.setOpaque(true);
+		jbutton_background_yello.addActionListener(ml);
+		
+		JButton jbutton_background_green = new JButton("Green Background");
+		jbutton_background_green.setFont(font);
+		jbutton_background_green.setBackground(Color.GREEN);
+		jbutton_background_green.setOpaque(true);
+		jbutton_background_green.setBorderPainted(false);
+		jbutton_background_green.addActionListener(ml);
+		
+		jpanel.add(jbutton_text_red);
+		jpanel.add(jbutton_text_yello);
+		jpanel.add(jbutton_text_green);
+		jpanel.add(jbutton_background_red);
+		jpanel.add(jbutton_background_yello);
+		jpanel.add(jbutton_background_green);
+		
+		this.setLayout(new BorderLayout());
+		this.add(jlabel, BorderLayout.NORTH);
+		this.add(jpanel, BorderLayout.CENTER);
+		this.setVisible(true);
+	}
+	public void changecolor(Color color) {
+		this.jlabel.setForeground(color);	
+	}
+	public void changebackgruondcolor(Color color) {
+		this.jlabel.setBackground(color);
+		this.jlabel.setOpaque(true);
+	}
+}

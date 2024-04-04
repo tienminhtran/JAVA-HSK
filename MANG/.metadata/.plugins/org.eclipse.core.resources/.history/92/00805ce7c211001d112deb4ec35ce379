@@ -1,0 +1,48 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import model.Lastbutton;
+
+public class buttonview extends JFrame{
+	private Lastbutton lastbuttonmodel;
+	public buttonview() {
+		this.lastbuttonmodel= new Lastbutton();    
+		this.init();
+	
+	}
+	private void init() {
+		this.setTitle("Last button");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(300, 300);
+		this.setLocationRelativeTo(null);
+		
+		JPanel jpanel_center= new JPanel();
+		jpanel_center.setLayout(new GridLayout(2,2));
+		
+		JButton jbutton_1 = new JButton("1");
+		JButton jbutton_2 = new JButton("2");
+		JButton jbutton_3 = new JButton("3");
+		JButton jbutton_4 = new JButton("4");
+		jpanel_center.add(jbutton_1);
+		jpanel_center.add(jbutton_2);
+		jpanel_center.add(jbutton_3);
+		jpanel_center.add(jbutton_4);
+		
+		JPanel jpanel_footer = new JPanel();
+		JLabel jlabel = new JLabel("------");
+		jpanel_footer.add(jlabel);
+		this.setLayout(new BorderLayout());
+		this.add(jpanel_center, BorderLayout.CENTER);
+		this.add(jpanel_footer,BorderLayout.SOUTH);
+		this.setVisible(true);
+		
+		
+	}
+}

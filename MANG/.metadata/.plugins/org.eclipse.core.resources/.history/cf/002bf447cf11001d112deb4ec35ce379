@@ -1,0 +1,72 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import model.Mycolomodel;
+
+public class Mycolorview extends JFrame {
+	private Mycolomodel mycolomodel;
+	private JLabel jlabel;
+	public Mycolorview() {
+		this.mycolomodel= new Mycolomodel();
+		this.init();
+	}
+	public void init() 
+	{
+		this.setTitle("My Color");
+		this.setSize(600,600);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Font font = new Font("Aria", Font.BOLD|Font.ITALIC, 40);
+		jlabel = new JLabel("-----");
+		jlabel.setFont(font);
+		JPanel jpanel = new JPanel();
+		jpanel.setLayout(new GridLayout(2,3));
+		
+		
+		JButton jbutton_text_red = new JButton("Red Text");
+		jbutton_text_red.setFont(font);
+		jbutton_text_red.setForeground(Color.RED);
+		
+		JButton jbutton_text_yello = new JButton("Yello Text");
+		jbutton_text_yello.setFont(font);
+		jbutton_text_yello.setForeground(Color.YELLOW);
+		
+		JButton jbutton_text_green = new JButton("Green Text");
+		jbutton_text_green.setFont(font);
+		jbutton_text_green.setForeground(Color.GREEN);
+		JButton jbutton_background_red = new JButton("Red Background");
+		jbutton_background_red.setFont(font);
+		jbutton_background_red.setBackground(Color.red);
+		
+		JButton jbutton_background_yello = new JButton("Yello Background");
+		jbutton_background_red.setFont(font);
+		jbutton_background_yello.setBackground(Color.YELLOW);
+		
+		JButton jbutton_background_green = new JButton("Green Background");
+		jbutton_background_red.setFont(font);
+		jbutton_background_green.setBackground(Color.GREEN);
+
+		jpanel.add(jbutton_text_red);
+		jpanel.add(jbutton_text_yello);
+		jpanel.add(jbutton_text_green);
+		jpanel.add(jbutton_background_red);
+		jpanel.add(jbutton_background_yello);
+		jpanel.add(jbutton_background_green);
+		
+		this.setLayout(new BorderLayout());
+		this.add(jlabel, BorderLayout.NORTH);
+		this.add(jpanel, BorderLayout.CENTER);
+		this.setVisible(true);
+	}
+}

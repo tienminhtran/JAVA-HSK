@@ -1,0 +1,12 @@
+package view;
+
+import javax.swing.JFrame;
+
+import model.Mycolomodel;
+
+public class Mycolorview extends JFrame {
+	private Mycolomodel mycolomodel;
+	public Mycolorview() {
+		this.mycolomodel= new Mycolomodel();
+	}
+}
